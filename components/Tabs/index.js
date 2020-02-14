@@ -25,12 +25,12 @@ const topics = document.querySelector('.topics');
 
 axios.get("https://lambda-times-backend.herokuapp.com/topics")
 .then(response => {
-    console.log(response.data)
+    console.log(response.data);
     //headerContainer.appendChild(CreateHeader());
     response.data.topics.forEach(item => {
         topics.appendChild(CreateTabs(item));
     })
 })
 .catch(error => {
-    console.log('the data ws not return', error)
+    console.log('the data ws not return', error);
 })
